@@ -6,6 +6,7 @@ import {
   Calendar, 
   Phone, 
   MessageCircle,
+  Mail,
   ChevronRight
 } from 'lucide-react';
 import { ATV, BookingRequest, ViewState } from './types';
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   const [fleet, setFleet] = useState<ATV[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isFAQOpen, setIsFAQOpen] = useState(false);
 
   // Load Fleet Data on Mount
   useEffect(() => {
@@ -133,25 +135,14 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            <section className="bg-emerald-900 text-white py-20 px-4">
+            <section id="about-us" className="bg-emerald-900 text-white py-20 px-4">
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-3xl font-bold mb-6">Why BambiRentals?</h3>
-                  <ul className="space-y-4">
-                    {[
-                      "Best maintained fleet in Santa Teresa",
-                      "24/7 Roadside assistance included",
-                      "Free delivery to your hotel or villa",
-                      "Local tips on hidden waterfalls and beaches"
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
-                        <div className="bg-orange-500 rounded-full p-1">
-                          <ChevronRight size={16} className="text-white" />
-                        </div>
-                        <span className="text-lg text-emerald-100">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <span className="text-orange-500 font-bold uppercase tracking-wider text-sm">About Us</span>
+                  <h3 className="text-3xl font-bold mb-6 mt-2">Who We Are</h3>
+                  <p className="text-lg text-emerald-100 leading-relaxed">
+                    Founded in Santa Teresa in 2020, Bambirental is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
+                  </p>
                 </div>
                 <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
                   <img 
@@ -186,9 +177,43 @@ const App: React.FC = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
               <button onClick={() => setCurrentView('home')} className="text-stone-600 hover:text-orange-600 font-medium transition-colors">Fleet</button>
-              <button className="text-stone-600 hover:text-orange-600 font-medium transition-colors">About Us</button>
-              <button className="text-stone-600 hover:text-orange-600 font-medium transition-colors">Contact</button>
-              <button 
+              <button
+                onClick={() => {
+                  const element = document.getElementById('about-us');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    setCurrentView('home');
+                    setTimeout(() => {
+                      document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  }
+                }}
+                className="text-stone-600 hover:text-orange-600 font-medium transition-colors"
+              >About Us</button>
+              <a
+                href="https://wa.me/50664132024"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-600 hover:text-orange-600 font-medium transition-colors flex items-center gap-1"
+                title="WhatsApp"
+                aria-label="Contact us on WhatsApp"
+              >
+                <MessageCircle size={20} />
+              </a>
+              <a
+                href="mailto:ofeynat2021@gmail.com"
+                className="text-stone-600 hover:text-orange-600 font-medium transition-colors flex items-center gap-1"
+                title="Email"
+                aria-label="Send us an email"
+              >
+                <Mail size={20} />
+              </a>
+              <button
+                onClick={() => setIsFAQOpen(!isFAQOpen)}
+                className="text-stone-600 hover:text-orange-600 font-medium transition-colors"
+              >Help & FAQ</button>
+              <button
                 onClick={() => {
                    const element = document.getElementById('fleet-section');
                    if (element) {
@@ -220,8 +245,41 @@ const App: React.FC = () => {
           <div className="md:hidden bg-white border-t border-stone-100 absolute w-full shadow-lg">
             <div className="px-4 pt-2 pb-6 space-y-2">
               <button onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }} className="block w-full text-left py-3 text-lg font-medium text-stone-600 border-b border-stone-100">Fleet</button>
-              <button className="block w-full text-left py-3 text-lg font-medium text-stone-600 border-b border-stone-100">About Us</button>
-              <button className="block w-full text-left py-3 text-lg font-medium text-stone-600 border-b border-stone-100">Contact</button>
+              <button
+                onClick={() => {
+                  setCurrentView('home');
+                  setIsMobileMenuOpen(false);
+                  setTimeout(() => {
+                    document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
+                className="block w-full text-left py-3 text-lg font-medium text-stone-600 border-b border-stone-100"
+              >About Us</button>
+              <a
+                href="https://wa.me/50664132024"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 py-3 text-lg font-medium text-stone-600 border-b border-stone-100"
+              >
+                <MessageCircle size={20} />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="mailto:ofeynat2021@gmail.com"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 py-3 text-lg font-medium text-stone-600 border-b border-stone-100"
+              >
+                <Mail size={20} />
+                <span>Email</span>
+              </a>
+              <button
+                onClick={() => {
+                  setIsFAQOpen(!isFAQOpen);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block w-full text-left py-3 text-lg font-medium text-stone-600 border-b border-stone-100"
+              >Help & FAQ</button>
               <div className="pt-4">
                  <button 
                   onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }}
@@ -241,7 +299,7 @@ const App: React.FC = () => {
       </main>
 
       {/* FAQ Assistant */}
-      <FAQAssistant />
+      <FAQAssistant isOpen={isFAQOpen} onToggle={setIsFAQOpen} />
 
       {/* Footer */}
       <footer className="bg-emerald-950 text-emerald-100 pt-16 pb-8">

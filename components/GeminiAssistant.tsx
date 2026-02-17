@@ -33,9 +33,23 @@ const FAQS: FAQItem[] = [
     }
 ];
 
-export const FAQAssistant: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+interface FAQAssistantProps {
+    isOpen?: boolean;
+    onToggle?: (open: boolean) => void;
+}
+
+export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIsOpen, onToggle }) => {
+    const [internalIsOpen, setInternalIsOpen] = useState(false);
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const isOpen = controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen;
+    const setIsOpen = (open: boolean) => {
+        if (onToggle) {
+            onToggle(open);
+        } else {
+            setInternalIsOpen(open);
+        }
+    };
 
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);

@@ -20,12 +20,12 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-                <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 border border-orange-500 text-orange-400 text-sm font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
-                    Est. 2024 • Santa Teresa
+                <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 border border-orange-500 text-orange-400 font-bold tracking-widest uppercase mb-6 backdrop-blur-sm" style={{ fontSize: '1.05rem' }}>
+                    Santa Teresa
                 </span>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                     Explore Paradise <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">Unleashed</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">on ATV</span>
                 </h1>
                 <p className="text-lg md:text-2xl text-stone-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                     Rent premium Honda ATVs and discover the hidden waterfalls and secret beaches of the Nicoya Peninsula.
@@ -37,7 +37,10 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                     >
                         Rent Your ATV
                     </button>
-                    <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg font-semibold py-4 px-10 rounded-full transition-all">
+                    <button
+                        onClick={() => window.open('https://www.google.com/maps/search/BambiRentals', '_blank', 'noopener,noreferrer')}
+                        className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg font-semibold py-4 px-10 rounded-full transition-all"
+                    >
                         View Map
                     </button>
                 </div>
