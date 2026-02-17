@@ -68,8 +68,8 @@ const App: React.FC = () => {
   const renderContent = () => {
     if (isLoading) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-stone-50">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-700"></div>
+        <div className="min-h-screen flex items-center justify-center bg-accent">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       );
     }
@@ -117,8 +117,8 @@ const App: React.FC = () => {
             
             <section id="fleet-section" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
               <div className="text-center mb-16">
-                <span className="text-orange-600 font-bold uppercase tracking-wider text-sm">Our Fleet</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-emerald-950 mt-2 mb-4">Choose Your Ride</h2>
+                <span className="text-primary font-bold uppercase tracking-wider text-sm">Our Fleet</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-dark mt-2 mb-4 tracking-wide">Choose Your Ride</h2>
                 <p className="text-stone-600 max-w-2xl mx-auto text-lg">
                   Maintained daily by our expert mechanics. Whether you want agility for the hills or comfort for the long haul to Hermosa.
                 </p>
@@ -135,12 +135,12 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            <section id="about-us" className="bg-emerald-900 text-white py-20 px-4">
+            <section id="about-us" className="bg-secondary text-white py-20 px-4">
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <span className="text-orange-500 font-bold uppercase tracking-wider text-sm">About Us</span>
-                  <h3 className="text-3xl font-bold mb-6 mt-2">Who We Are</h3>
-                  <p className="text-lg text-emerald-100 leading-relaxed">
+                  <span className="text-primary font-bold uppercase tracking-wider text-sm">About Us</span>
+                  <h3 className="text-3xl font-bold mb-6 mt-2 tracking-wide">Who We Are</h3>
+                  <p className="text-lg text-gray-100 leading-relaxed">
                     Founded in Santa Teresa in 2020, Bambirental is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
                   </p>
                 </div>
@@ -159,7 +159,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-stone-50">
+    <div className="min-h-screen flex flex-col font-sans bg-accent">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,15 +168,15 @@ const App: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => setCurrentView('home')}
             >
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center transform -rotate-6">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform -rotate-6">
                  <span className="text-white font-bold text-xl">B</span>
               </div>
-              <span className="text-2xl font-bold text-emerald-950 tracking-tight">BambiRentals</span>
+              <span className="text-2xl font-bold text-dark tracking-tight">BambiRentals</span>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <button onClick={() => setCurrentView('home')} className="text-stone-600 hover:text-orange-600 font-medium transition-colors">Fleet</button>
+              <button onClick={() => setCurrentView('home')} className="text-stone-600 hover:text-primary font-medium transition-colors">Fleet</button>
               <button
                 onClick={() => {
                   const element = document.getElementById('about-us');
@@ -189,13 +189,13 @@ const App: React.FC = () => {
                     }, 100);
                   }
                 }}
-                className="text-stone-600 hover:text-orange-600 font-medium transition-colors"
+                className="text-stone-600 hover:text-primary font-medium transition-colors"
               >About Us</button>
               <a
                 href="https://wa.me/50664132024"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-stone-600 hover:text-orange-600 font-medium transition-colors flex items-center gap-1"
+                className="text-stone-600 hover:text-primary font-medium transition-colors flex items-center gap-1"
                 title="WhatsApp"
                 aria-label="Contact us on WhatsApp"
               >
@@ -203,7 +203,7 @@ const App: React.FC = () => {
               </a>
               <a
                 href="mailto:ofeynat2021@gmail.com"
-                className="text-stone-600 hover:text-orange-600 font-medium transition-colors flex items-center gap-1"
+                className="text-stone-600 hover:text-primary font-medium transition-colors flex items-center gap-1"
                 title="Email"
                 aria-label="Send us an email"
               >
@@ -211,7 +211,7 @@ const App: React.FC = () => {
               </a>
               <button
                 onClick={() => setIsFAQOpen(!isFAQOpen)}
-                className="text-stone-600 hover:text-orange-600 font-medium transition-colors"
+                className="text-stone-600 hover:text-primary font-medium transition-colors"
               >Help & FAQ</button>
               <button
                 onClick={() => {
@@ -222,7 +222,7 @@ const App: React.FC = () => {
                      setCurrentView('home');
                    }
                 }}
-                className="bg-emerald-900 text-white px-6 py-2.5 rounded-full font-medium hover:bg-emerald-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-primary text-white px-6 py-2.5 rounded-xl font-medium hover:bg-primary-hover transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Book Now
               </button>
@@ -232,7 +232,7 @@ const App: React.FC = () => {
             <div className="md:hidden">
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-emerald-950 p-2"
+                className="text-dark p-2"
               >
                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
@@ -283,7 +283,7 @@ const App: React.FC = () => {
               <div className="pt-4">
                  <button 
                   onClick={() => { setCurrentView('home'); setIsMobileMenuOpen(false); }}
-                  className="w-full bg-orange-500 text-white py-3 rounded-lg font-bold text-lg"
+                  className="w-full bg-primary text-white py-3 rounded-xl font-bold text-lg"
                  >
                    Book Your ATV
                  </button>
@@ -302,17 +302,17 @@ const App: React.FC = () => {
       <FAQAssistant isOpen={isFAQOpen} onToggle={setIsFAQOpen} />
 
       {/* Footer */}
-      <footer className="bg-emerald-950 text-emerald-100 pt-16 pb-8">
+      <footer className="bg-dark text-gray-300 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Brand & Social */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
                  <span className="text-white font-bold">B</span>
               </div>
               <span className="text-xl font-bold text-white">BambiRentals</span>
             </div>
-            <p className="text-emerald-300/80 mb-6">
+            <p className="text-gray-400 mb-6">
               Your gateway to the hidden gems of the Nicoya Peninsula. Reliable rides, local vibes.
             </p>
             <div className="flex gap-4">
@@ -320,7 +320,7 @@ const App: React.FC = () => {
                 href="https://wa.me/50664132024" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-orange-400 transition-colors flex items-center gap-2 font-semibold"
+                className="hover:text-primary transition-colors flex items-center gap-2 font-semibold"
               >
                 <MessageCircle size={24} />
                 <span>Chat on WhatsApp</span>
@@ -337,24 +337,24 @@ const App: React.FC = () => {
                   href="https://maps.google.com/?q=9.611115,-85.143463" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 hover:text-orange-400 transition-colors"
+                  className="flex items-start gap-3 hover:text-primary transition-colors"
                 >
-                  <MapPin className="text-orange-500 shrink-0 mt-1" size={20} />
+                  <MapPin className="text-primary shrink-0 mt-1" size={20} />
                   <span>Santa Teresa, Costa Rica</span>
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="text-orange-500 shrink-0" size={20} />
-                <span>+506 6413 2024</span>
+                <Phone className="text-primary shrink-0" size={20} />
+                <span>+506 6413-2024</span>
               </li>
               <li className="flex items-center gap-3">
-                <Calendar className="text-orange-500 shrink-0" size={20} />
+                <Calendar className="text-primary shrink-0" size={20} />
                 <span>Daily: 8:00 AM - 6:00 PM</span>
               </li>
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-emerald-900 text-center text-emerald-400 text-sm">
+        <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} BambiRentals. All rights reserved.
         </div>
       </footer>

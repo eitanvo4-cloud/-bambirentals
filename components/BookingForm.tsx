@@ -71,14 +71,14 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
     };
 
     return (
-        <div className="min-h-screen bg-stone-100 py-12 px-4 animate-in fade-in duration-300">
+        <div className="min-h-screen bg-accent py-12 px-4 animate-in fade-in duration-300">
             <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
-                <div className="bg-emerald-900 p-6 flex justify-between items-center text-white">
+                <div className="bg-secondary p-6 flex justify-between items-center text-white">
                     <div>
                         <h2 className="text-2xl font-bold">Complete Reservation</h2>
-                        <p className="text-emerald-200 opacity-80">{atv.modelName}</p>
+                        <p className="text-green-200 opacity-80">{atv.modelName}</p>
                     </div>
-                    <button onClick={onCancel} className="p-2 hover:bg-emerald-800 rounded-full transition-colors">
+                    <button onClick={onCancel} className="p-2 hover:bg-green-800 rounded-full transition-colors">
                         <X size={24} />
                     </button>
                 </div>
@@ -87,7 +87,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                     {/* Date Selection */}
                     <div className="space-y-4">
                         <h3 className="text-lg font-bold text-stone-800 flex items-center gap-2">
-                            <Calendar size={20} className="text-orange-500" /> 
+                            <Calendar size={20} className="text-primary" /> 
                             Dates
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
@@ -99,7 +99,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                     min={new Date().toISOString().split('T')[0]}
                                     value={startDate}
                                     onChange={(e) => setStartDate(e.target.value)}
-                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                 />
                             </div>
                             <div>
@@ -110,7 +110,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                     min={startDate}
                                     value={endDate}
                                     onChange={(e) => setEndDate(e.target.value)}
-                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                 />
                             </div>
                         </div>
@@ -121,7 +121,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                     {/* User Details */}
                     <div className="space-y-4">
                         <h3 className="text-lg font-bold text-stone-800 flex items-center gap-2">
-                            <User size={20} className="text-orange-500" /> 
+                            <User size={20} className="text-primary" /> 
                             Your Details
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
@@ -132,7 +132,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                     required
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)}
-                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                     placeholder="John"
                                 />
                             </div>
@@ -143,7 +143,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                     required
                                     value={lastName}
                                     onChange={(e) => setLastName(e.target.value)}
-                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                     placeholder="Doe"
                                 />
                             </div>
@@ -155,7 +155,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                 required
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
-                                className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                 placeholder="+1 (555) 000-0000"
                             />
                         </div>
@@ -166,7 +166,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
+                                className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                                 placeholder="john@example.com"
                             />
                         </div>
@@ -180,7 +180,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                             <span className="text-stone-600">Daily Rate</span>
                             <span className="font-medium">${atv.dailyPrice}</span>
                         </div>
-                        <div className="flex justify-between items-center text-xl font-bold text-emerald-900 border-t border-stone-200 pt-2 mt-2">
+                        <div className="flex justify-between items-center text-xl font-bold text-secondary border-t border-stone-200 pt-2 mt-2">
                             <span>Total Estimated</span>
                             <span>${totalPrice}</span>
                         </div>
@@ -189,7 +189,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                                 type="checkbox" 
                                 id="price-accept"
                                 required
-                                className="mt-1 w-4 h-4 text-orange-600 rounded focus:ring-orange-500"
+                                className="mt-1 w-4 h-4 text-primary rounded focus:ring-primary"
                             />
                             <label htmlFor="price-accept" className="text-sm text-stone-600">
                                 I accept the rental rate of <span className="font-bold">${totalPrice}</span>.
@@ -205,17 +205,17 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                             checked={agreed}
                             onChange={(e) => setAgreed(e.target.checked)}
                             required
-                            className="mt-1 w-4 h-4 text-orange-600 rounded focus:ring-orange-500"
+                            className="mt-1 w-4 h-4 text-primary rounded focus:ring-primary"
                         />
                         <label htmlFor="terms" className="text-sm text-stone-600">
-                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-orange-600 underline font-medium">Terms & Conditions</button> of BambiRentals.
+                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-primary underline font-medium">Terms & Conditions</button> of BambiRentals.
                         </label>
                     </div>
 
                     <button 
                         type="submit" 
                         disabled={totalPrice <= 0}
-                        className="w-full bg-emerald-900 hover:bg-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-lg transition-all"
+                        className="w-full bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-lg transition-all"
                     >
                         Confirm Request
                     </button>
@@ -227,7 +227,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
                     <div className="bg-white rounded-2xl max-w-lg w-full max-h-[80vh] flex flex-col shadow-2xl">
                         <div className="p-6 border-b border-stone-100 flex justify-between items-center">
-                            <h3 className="text-xl font-bold text-emerald-900">Terms & Conditions</h3>
+                            <h3 className="text-xl font-bold text-secondary">Terms & Conditions</h3>
                             <button onClick={() => setShowTerms(false)}><X className="text-stone-400 hover:text-stone-800" /></button>
                         </div>
                         <div className="p-6 overflow-y-auto whitespace-pre-line text-stone-600 text-sm">
@@ -236,7 +236,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         <div className="p-6 border-t border-stone-100">
                             <button 
                                 onClick={() => { setAgreed(true); setShowTerms(false); }}
-                                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl"
+                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl"
                             >
                                 I Agree
                             </button>

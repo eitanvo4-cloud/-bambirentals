@@ -8,7 +8,7 @@ export const ATV_FLEET: ATV[] = [
         modelName: 'Honda TRX 450',
         description: 'Powerful and agile, perfect for solo riders tackling the steep hills of Mal Pais. The sport utility choice for exploring the jungle trails.',
         dailyPrice: 70,
-        image: 'https://i.ibb.co/xKkSBjyF/red-honda-ofer.jpg',
+        image: '/atvs/honda-red.jpg',
         specs: ['450cc Engine', 'Manual Transmission', '2WD Sport', 'Single Rider'],
         transmission: 'Manual'
     },
@@ -17,7 +17,7 @@ export const ATV_FLEET: ATV[] = [
         modelName: 'Honda Rubicon 520',
         description: 'The beast. 4x4 capability with extra comfort for longer rides to Hermosa or Montezuma. Features independent suspension for a smoother ride.',
         dailyPrice: 90,
-        image: 'https://i.ibb.co/pr0Fy2gY/black-honda-ofer.jpg',
+        image: '/atvs/honda-black.jpg',
         specs: ['518cc Engine', 'Automatic DCT', '4x4 / Diff Lock', 'Power Steering'],
         transmission: 'Automatic'
     }

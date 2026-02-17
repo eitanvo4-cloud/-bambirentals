@@ -59,17 +59,17 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
         <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
             {isOpen && (
                 <div className="bg-white rounded-2xl shadow-2xl w-80 sm:w-96 max-h-[600px] mb-4 flex flex-col border border-stone-200 overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-300">
-                     <div className="bg-emerald-900 p-4 flex justify-between items-center text-white shrink-0">
+                     <div className="bg-secondary p-4 flex justify-between items-center text-white shrink-0">
                         <div className="flex items-center gap-2">
-                            <div className="bg-orange-500 p-1.5 rounded-full">
+                            <div className="bg-primary p-1.5 rounded-full">
                                 <HelpCircle size={16} className="text-white" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm">FAQ</h3>
-                                <p className="text-xs text-emerald-300">Common Questions</p>
+                                <p className="text-xs text-green-300">Common Questions</p>
                             </div>
                         </div>
-                        <button onClick={() => setIsOpen(false)} className="hover:text-orange-400 transition-colors">
+                        <button onClick={() => setIsOpen(false)} className="hover:text-primary transition-colors">
                             <X size={20} />
                         </button>
                     </div>
@@ -81,9 +81,9 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
                                     onClick={() => toggleFAQ(index)}
                                     className="w-full text-left p-4 flex justify-between items-center gap-3 hover:bg-stone-50 transition-colors"
                                 >
-                                    <span className="font-semibold text-emerald-950 text-sm">{faq.question}</span>
+                                    <span className="font-semibold text-dark text-sm">{faq.question}</span>
                                     {openIndex === index ? (
-                                        <ChevronUp size={18} className="text-orange-500 shrink-0" />
+                                        <ChevronUp size={18} className="text-primary shrink-0" />
                                     ) : (
                                         <ChevronDown size={18} className="text-stone-400 shrink-0" />
                                     )}
@@ -107,7 +107,7 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
             {!isOpen && (
                 <button 
                     onClick={() => setIsOpen(true)}
-                    className="bg-emerald-900 hover:bg-emerald-800 text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
+                    className="bg-secondary hover:bg-green-800 text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
                 >
                     <MessageCircle size={28} />
                     <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold">

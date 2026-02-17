@@ -23,27 +23,27 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
     const waLink = `https://wa.me/50664132024?text=${encodeURIComponent(waMessage)}`;
 
     return (
-        <div className="min-h-screen bg-stone-50 py-12 px-4 flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-700">
+        <div className="min-h-screen bg-accent py-12 px-4 flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="max-w-3xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-stone-100">
                 {/* Header */}
-                <div className="bg-emerald-900 p-8 text-center relative overflow-hidden">
+                <div className="bg-secondary p-8 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                     <div className="relative z-10 flex flex-col items-center">
                         <div className="bg-white/10 backdrop-blur-md p-4 rounded-full mb-4 animate-in zoom-in duration-500 delay-150">
-                            <CheckCircle size={64} className="text-emerald-400" />
+                            <CheckCircle size={64} className="text-green-400" />
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Request Received!</h1>
-                        <p className="text-emerald-200 text-lg">Your adventure awaits, {booking.firstName}.</p>
+                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-wide">Request Received!</h1>
+                        <p className="text-green-200 text-lg">Your adventure awaits, {booking.firstName}.</p>
                     </div>
                 </div>
 
                 <div className="p-8 md:p-12">
                     <div className="text-center mb-10">
                         <p className="text-stone-600 text-lg leading-relaxed max-w-xl mx-auto">
-                            Thank you for choosing BambiRentals. We have received your request for the <span className="font-bold text-emerald-900">{atv.modelName}</span>. 
-                            Our team will review availability and send a confirmation email to <span className="font-semibold text-emerald-700">{booking.email}</span> shortly.
+                            Thank you for choosing BambiRentals. We have received your request for the <span className="font-bold text-secondary">{atv.modelName}</span>.
+                            Our team will review availability and send a confirmation email to <span className="font-semibold text-secondary">{booking.email}</span> shortly.
                             <br/><br/>
-                            <span className="font-medium text-emerald-800">Want a faster response? Message us directly on WhatsApp and we'll confirm your booking in minutes.</span>
+                            <span className="font-medium text-secondary">Want a faster response? Message us directly on WhatsApp and we'll confirm your booking in minutes.</span>
                         </p>
                     </div>
 
@@ -56,7 +56,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-orange-100 p-2 rounded-lg text-orange-600">
+                                    <div className="bg-orange-100 p-2 rounded-lg text-primary">
                                         <Calendar size={24} />
                                     </div>
                                     <div>
@@ -68,7 +68,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                                 </div>
                                 
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-orange-100 p-2 rounded-lg text-orange-600">
+                                    <div className="bg-orange-100 p-2 rounded-lg text-primary">
                                         <MapPin size={24} />
                                     </div>
                                     <div>
@@ -81,7 +81,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-orange-100 p-2 rounded-lg text-orange-600">
+                                    <div className="bg-orange-100 p-2 rounded-lg text-primary">
                                         <User size={24} />
                                     </div>
                                     <div>
@@ -92,12 +92,12 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-orange-100 p-2 rounded-lg text-orange-600">
+                                    <div className="bg-orange-100 p-2 rounded-lg text-primary">
                                         <ShieldCheck size={24} />
                                     </div>
                                     <div>
                                         <p className="text-sm text-stone-500 font-medium">Total Estimated</p>
-                                        <p className="font-bold text-emerald-700 text-xl">${booking.totalPrice}</p>
+                                        <p className="font-bold text-secondary text-xl">${booking.totalPrice}</p>
                                         <p className="text-xs text-stone-400">Paid upon delivery</p>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                             href={waLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full max-w-sm bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            className="w-full max-w-sm bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
                         >
                             <MessageCircle size={24} />
                             Confirm via WhatsApp
@@ -118,7 +118,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
 
                         <button 
                             onClick={onHome}
-                            className="w-full max-w-sm bg-emerald-900 hover:bg-emerald-800 text-white text-lg font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            className="w-full max-w-sm bg-dark hover:bg-stone-800 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
                         >
                             <Home size={20} />
                             Return to Home

@@ -19,7 +19,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
             </div>
 
             <div className="max-w-7xl mx-auto px-4 py-8 md:py-16">
-                <button onClick={onBack} className="hidden md:flex items-center text-stone-600 font-medium mb-8 hover:text-orange-600 transition-colors">
+                <button onClick={onBack} className="hidden md:flex items-center text-stone-600 font-medium mb-8 hover:text-primary transition-colors">
                     <ArrowLeft size={20} className="mr-2" /> Back to Fleet
                 </button>
 
@@ -32,7 +32,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
                         <div className="grid grid-cols-2 gap-4">
                             {atv.specs.map((spec, i) => (
                                 <div key={i} className="bg-stone-50 p-4 rounded-xl border border-stone-100 text-center">
-                                    <span className="font-semibold text-emerald-900">{spec}</span>
+                                    <span className="font-semibold text-secondary">{spec}</span>
                                 </div>
                             ))}
                         </div>
@@ -41,11 +41,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
                     {/* Right: Info & Actions */}
                     <div className="flex flex-col justify-center">
                         <div className="mb-2">
-                             <span className="text-orange-600 font-bold uppercase tracking-wider text-sm">Best Choice For Adventure</span>
+                             <span className="text-primary font-bold uppercase tracking-wider text-sm">Best Choice For Adventure</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-emerald-950 mb-6">{atv.modelName}</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold text-dark mb-6 tracking-wide">{atv.modelName}</h1>
                         <div className="flex items-end gap-2 mb-8">
-                            <span className="text-4xl font-bold text-emerald-800">${atv.dailyPrice}</span>
+                            <span className="text-4xl font-bold text-secondary">${atv.dailyPrice}</span>
                             <span className="text-stone-500 pb-1 text-lg">/ day</span>
                         </div>
 
@@ -55,33 +55,33 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
 
                         <div className="space-y-4 mb-10">
                             <div className="flex items-start gap-3">
-                                <ShieldCheck className="text-emerald-600 shrink-0 mt-1" />
+                                <ShieldCheck className="text-secondary shrink-0 mt-1" />
                                 <div>
-                                    <h4 className="font-bold text-emerald-900">Insurance Included</h4>
+                                    <h4 className="font-bold text-secondary">Insurance Included</h4>
                                     <p className="text-sm text-stone-500">Basic liability coverage comes standard with every rental.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
-                                <Map className="text-emerald-600 shrink-0 mt-1" />
+                                <Map className="text-secondary shrink-0 mt-1" />
                                 <div>
-                                    <h4 className="font-bold text-emerald-900">Free Offline Map</h4>
+                                    <h4 className="font-bold text-secondary">Free Offline Map</h4>
                                     <p className="text-sm text-stone-500">We load your phone with a custom map of trails and beaches.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200 mb-8">
-                            <h3 className="font-bold text-emerald-950 mb-2">Rental Requirements</h3>
+                            <h3 className="font-bold text-dark mb-2">Rental Requirements</h3>
                             <ul className="space-y-2 text-sm text-stone-600">
-                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-emerald-600"/> Valid Driver's License</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-emerald-600"/> Credit Card for Deposit</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-emerald-600"/> Minimum Age: 18</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-secondary"/> Valid Driver's License</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-secondary"/> Credit Card for Deposit</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-secondary"/> Minimum Age: 18</li>
                             </ul>
                         </div>
 
                         <button 
                             onClick={onBook}
-                            className="w-full bg-orange-500 hover:bg-orange-600 text-white text-xl font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                            className="w-full bg-primary hover:bg-primary-hover text-white text-xl font-bold py-5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
                         >
                             Request Booking
                         </button>
