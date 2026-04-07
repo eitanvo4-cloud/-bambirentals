@@ -35,10 +35,13 @@ export const createBooking = async (booking: BookingRequest): Promise<{ success:
         "ATV Model": modelName,
         "First Name": booking.firstName,
         "Last Name": booking.lastName,
-        "Phone": booking.phone,
+        "WhatsApp": booking.whatsappNumber,
         "Email": booking.email,
         "Start Date": booking.startDate,
         "End Date": booking.endDate,
+        "Theft Protection": booking.theftProtection ? "Yes" : "No",
+        "Full Damage Protection": booking.fullDamageProtection ? "Yes" : "No",
+        "Pre-paid Refueling (tanks)": booking.prepaidRefueling,
         "Total Price": `$${booking.totalPrice}`,
         "Agreed To Terms": booking.agreedToTerms ? "Yes" : "No"
     };

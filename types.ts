@@ -4,8 +4,10 @@ export interface ATV {
     description: string;
     dailyPrice: number;
     image: string;
+    images?: string[];
     specs: string[];
     transmission: string;
+    status?: 'available' | 'rented' | 'maintenance';
 }
 
 export interface BookingRequest {
@@ -14,8 +16,11 @@ export interface BookingRequest {
     endDate: string; // ISO String YYYY-MM-DD
     firstName: string;
     lastName: string;
-    phone: string;
+    whatsappNumber: string;
     email: string;
+    theftProtection: boolean;
+    fullDamageProtection: boolean;
+    prepaidRefueling: number;
     totalPrice: number;
     agreedToTerms: boolean;
 }
