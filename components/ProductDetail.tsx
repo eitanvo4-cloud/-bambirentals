@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, CheckCircle2, Map } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { ATV } from '../types';
 
 interface ProductDetailProps {
@@ -84,17 +84,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
                             {atv.description}
                         </p>
 
-                        <div className="space-y-4 mb-10">
-                            <div className="flex items-start gap-3">
-                                <Map className="text-secondary shrink-0 mt-1" />
-                                <div>
-                                    <h4 className="font-bold text-gray-900 font-display">Free Offline Map</h4>
-                                    <p className="text-sm text-gray-500 font-light">We load your phone with a custom map of trails and beaches.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 mb-8">
+<div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 mb-8">
                             <h3 className="font-bold text-gray-900 mb-2 font-display">Rental Requirements</h3>
                             <ul className="space-y-2 text-sm text-gray-600 font-light">
                                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-secondary" /> Valid Driver's License</li>
