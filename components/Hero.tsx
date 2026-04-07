@@ -11,7 +11,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1920"
+                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1920"
                     alt="Santa Teresa Beach ATV"
                     className="w-full h-full object-cover"
                 />
