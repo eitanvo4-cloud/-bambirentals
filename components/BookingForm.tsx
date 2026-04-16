@@ -127,14 +127,14 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
     const fmt = (n: number) => n.toFixed(2);
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4 animate-in fade-in duration-300 relative z-10 flex items-center justify-center">
+        <div className="min-h-screen bg-eggshell py-12 px-4 animate-in fade-in duration-300 relative z-10 flex items-center justify-center">
             <div className="max-w-2xl w-full mx-auto bg-white border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
                 <div className="bg-gray-50 border-b border-gray-200 p-6 flex justify-between items-center">
                     <div>
                         <h2 className="text-2xl font-bold font-display text-gray-900">Complete Reservation</h2>
                         <p className="text-secondary font-display">{atv.modelName}</p>
                     </div>
-                    <button onClick={onCancel} className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                    <button onClick={onCancel} className="p-2 hover:bg-[#EDE8DF] rounded-full transition-colors text-gray-500">
                         <X size={24} />
                     </button>
                 </div>
@@ -235,7 +235,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                     <div className="border-t border-gray-100"></div>
 
                     {/* Free Pickup & Drop-off */}
-                    <div className="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-xl p-4">
+                    <div className="flex items-start gap-4 bg-cream border border-gray-200 rounded-xl p-4">
                         <div className="mt-0.5 text-secondary">
                             <Truck size={22} />
                         </div>
@@ -255,7 +255,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         </h3>
 
                         {/* Theft Protection */}
-                        <label className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${theftProtection ? 'border-primary/60 bg-primary/5' : 'border-gray-200 bg-gray-50 hover:bg-gray-100'} ${fullDamageProtection ? 'opacity-40 cursor-not-allowed' : ''}`}>
+                        <label className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${theftProtection ? 'border-primary/60 bg-primary/5' : 'border-gray-200 bg-cream hover:bg-[#EDE8DF]'} ${fullDamageProtection ? 'opacity-40 cursor-not-allowed' : ''}`}>
                             <input
                                 type="checkbox"
                                 checked={theftProtection}
@@ -274,7 +274,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         </label>
 
                         {/* Full Damage Protection */}
-                        <label className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${fullDamageProtection ? 'border-secondary/60 bg-secondary/5' : 'border-gray-200 bg-gray-50 hover:bg-gray-100'}`}>
+                        <label className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${fullDamageProtection ? 'border-secondary/60 bg-secondary/5' : 'border-gray-200 bg-cream hover:bg-[#EDE8DF]'}`}>
                             <input
                                 type="checkbox"
                                 checked={fullDamageProtection}
@@ -302,7 +302,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-700 text-sm font-light">
                             ⚠ Vehicle must be returned with a full tank or a $60 fee will apply.
                         </div>
-                        <div className="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl p-4">
+                        <div className="flex items-center justify-between bg-cream border border-gray-200 rounded-xl p-4">
                             <div>
                                 <p className="text-gray-900 font-semibold">Tanks of fuel</p>
                                 <p className="text-gray-500 text-sm font-light">$60 per full tank</p>
@@ -399,7 +399,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                     <button
                         type="submit"
                         disabled={totalPrice <= 0}
-                        className="w-full bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] transition-all transform hover:-translate-y-1"
+                        className="w-full bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1"
                     >
                         Confirm Request
                     </button>
@@ -420,7 +420,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         <div className="p-6 border-t border-gray-200">
                             <button
                                 onClick={() => { setAgreed(true); setShowTerms(false); }}
-                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl shadow-[0_0_15px_rgba(255,87,34,0.4)]"
+                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl shadow-[0_0_15px_rgba(212,98,30,0.4)]"
                             >
                                 I Agree
                             </button>

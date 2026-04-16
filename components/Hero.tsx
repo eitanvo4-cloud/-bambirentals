@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 >
                     <source src="/videos/hero.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-black/50 to-black/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#F4EFE4] via-black/50 to-black/20"></div>
             </div>
 
             {/* Content */}
@@ -38,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 </span>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl tracking-tight font-display">
                     Explore Paradise <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 drop-shadow-[0_0_15px_rgba(255,87,34,0.5)]">on ATV</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 drop-shadow-[0_0_15px_rgba(212,98,30,0.5)]">on ATV</span>
                 </h1>
                 <p className="text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
                     Rent premium Honda ATVs and discover the hidden waterfalls and secret beaches of the Nicoya Peninsula.
@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
                         onClick={onCtaClick}
-                        className="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-xl transition-all shadow-[0_0_20px_rgba(255,87,34,0.5)] hover:shadow-[0_0_35px_rgba(255,87,34,0.8)] transform hover:-translate-y-1 hover:scale-105"
+                        className="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-xl transition-all shadow-[0_0_20px_rgba(212,98,30,0.5)] hover:shadow-[0_0_35px_rgba(212,98,30,0.8)] transform hover:-translate-y-1 hover:scale-105"
                     >
                         Rent Your ATV
                     </button>

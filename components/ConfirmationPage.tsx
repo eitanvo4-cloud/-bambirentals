@@ -23,7 +23,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
     const waLink = `https://wa.me/50664132024?text=${encodeURIComponent(waMessage)}`;
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4 flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10">
+        <div className="min-h-screen bg-eggshell py-12 px-4 flex items-center justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10">
             <div className="max-w-3xl w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
                 {/* Header */}
                 <div className="bg-gray-50 border-b border-gray-200 p-8 text-center relative overflow-hidden">
@@ -107,7 +107,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                             href={waLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
                         >
                             <MessageCircle size={24} />
                             Confirm via WhatsApp

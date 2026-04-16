@@ -49,7 +49,7 @@ export const ATVCard: React.FC<ATVCardProps> = ({ atv, onViewDetails }) => {
                 {atv.status === 'available' || !atv.status ? (
                     <button
                         onClick={() => onViewDetails(atv)}
-                        className="w-full py-4 rounded-xl bg-gray-50 border border-gray-200 hover:bg-primary hover:border-primary text-gray-700 font-bold transition-all flex items-center justify-center gap-2 group-hover:bg-primary group-hover:border-primary/80 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(255,87,34,0.4)]"
+                        className="w-full py-4 rounded-xl bg-cream border border-gray-200 hover:bg-primary hover:border-primary text-gray-700 font-bold transition-all flex items-center justify-center gap-2 group-hover:bg-primary group-hover:border-primary/80 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,98,30,0.4)]"
                     >
                         View Details
                         <ArrowRight size={18} />

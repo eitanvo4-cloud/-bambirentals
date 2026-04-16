@@ -68,8 +68,8 @@ const App: React.FC = () => {
   const renderContent = () => {
     if (isLoading) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary shadow-[0_0_15px_rgba(255,87,34,0.5)]"></div>
+        <div className="min-h-screen flex items-center justify-center bg-eggshell">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary shadow-[0_0_15px_rgba(212,98,30,0.5)]"></div>
         </div>
       );
     }
@@ -135,7 +135,7 @@ const App: React.FC = () => {
               </div>
             </section>
 
-            <section id="about-us" className="relative py-20 px-4 mt-12 bg-white border-y border-gray-100">
+            <section id="about-us" className="relative py-20 px-4 mt-12 bg-cream border-y border-[#EDE8DF]">
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
                 <div>
                   <span className="text-primary font-bold uppercase tracking-widest text-sm font-display">About Us</span>
@@ -159,17 +159,17 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gray-50 text-gray-900 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col font-sans bg-eggshell text-gray-900 relative overflow-hidden">
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm transition-all duration-300">
+      <nav className="sticky top-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-xl border-b border-[#EDE8DF] shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => setCurrentView('home')}
             >
-              <div className="w-10 h-10 bg-primary/20 backdrop-blur-md rounded-lg flex items-center justify-center transform -rotate-6 border border-primary/50 shadow-[0_0_15px_rgba(255,87,34,0.3)]">
+              <div className="w-10 h-10 bg-primary/20 backdrop-blur-md rounded-lg flex items-center justify-center transform -rotate-6 border border-primary/50 shadow-[0_0_15px_rgba(212,98,30,0.3)]">
                 <span className="text-primary font-bold text-xl font-display">B</span>
               </div>
               <span className="text-2xl font-bold text-gray-900 tracking-tight font-display">BambiRentals</span>
@@ -223,7 +223,7 @@ const App: React.FC = () => {
                     setCurrentView('home');
                   }
                 }}
-                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_0_15px_rgba(255,87,34,0.4)] hover:shadow-[0_0_25px_rgba(255,87,34,0.6)] transform hover:-translate-y-0.5"
+                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_0_15px_rgba(212,98,30,0.4)] hover:shadow-[0_0_25px_rgba(212,98,30,0.6)] transform hover:-translate-y-0.5"
               >
                 Book Now
               </button>
@@ -317,12 +317,12 @@ const App: React.FC = () => {
       </a>
 
       {/* Footer */}
-      <footer className="bg-[#0A0E17] border-t border-white/5 text-slate-300 pt-16 pb-8 relative z-10">
+      <footer className="bg-[#16100A] border-t border-white/5 text-slate-300 pt-16 pb-8 relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Brand & Social */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary/20 backdrop-blur-md rounded flex items-center justify-center border border-primary/50 shadow-[0_0_10px_rgba(255,87,34,0.3)]">
+              <div className="w-8 h-8 bg-primary/20 backdrop-blur-md rounded flex items-center justify-center border border-primary/50 shadow-[0_0_10px_rgba(212,98,30,0.3)]">
                 <span className="text-primary font-bold font-display">B</span>
               </div>
               <span className="text-xl font-bold text-white font-display">BambiRentals</span>

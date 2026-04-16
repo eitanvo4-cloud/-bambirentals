@@ -42,7 +42,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
                                     <button
                                         key={i}
                                         onClick={() => setActiveImage(img)}
-                                        className={`shrink-0 w-20 h-16 rounded-xl overflow-hidden border-2 transition-all ${activeImage === img ? 'border-primary shadow-[0_0_10px_rgba(255,87,34,0.4)]' : 'border-gray-200 hover:border-gray-300'}`}
+                                        className={`shrink-0 w-20 h-16 rounded-xl overflow-hidden border-2 transition-all ${activeImage === img ? 'border-primary shadow-[0_0_10px_rgba(212,98,30,0.4)]' : 'border-gray-200 hover:border-gray-300'}`}
                                     >
                                         <img src={img} alt={`${atv.modelName} view ${i + 1}`} className="w-full h-full object-cover" />
                                     </button>
@@ -103,7 +103,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ atv, onBack, onBoo
                         ) : (
                             <button
                                 onClick={onBook}
-                                className="w-full bg-primary hover:bg-primary-hover text-white text-xl font-bold py-5 rounded-xl shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] transition-all transform hover:-translate-y-1 hover:scale-[1.02]"
+                                className="w-full bg-primary hover:bg-primary-hover text-white text-xl font-bold py-5 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1 hover:scale-[1.02]"
                             >
                                 Request Booking
                             </button>

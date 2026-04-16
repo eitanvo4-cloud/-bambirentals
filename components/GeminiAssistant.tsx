@@ -76,7 +76,7 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
 
                     <div className="overflow-y-auto p-4 space-y-3 bg-white">
                         {FAQS.map((faq, index) => (
-                            <div key={index} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden transition-all hover:bg-gray-100">
+                            <div key={index} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden transition-all hover:bg-[#EDE8DF]">
                                 <button
                                     onClick={() => toggleFAQ(index)}
                                     className="w-full text-left p-4 flex justify-between items-center gap-3 transition-colors"
@@ -106,7 +106,7 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="bg-primary hover:bg-primary-hover text-white p-4 rounded-full shadow-[0_0_20px_rgba(255,87,34,0.4)] hover:shadow-[0_0_30px_rgba(255,87,34,0.6)] border border-primary/50 transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
+                    className="bg-primary hover:bg-primary-hover text-white p-4 rounded-full shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] border border-primary/50 transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
                 >
                     <MessageCircle size={28} />
                     <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold font-display">
