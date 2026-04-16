@@ -146,9 +146,9 @@ const App: React.FC = () => {
                 </div>
                 <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800"
-                    alt="Santa Teresa Jungle"
-                    className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
+                    src="/pictures/Buttom.JPG"
+                    alt="Santa Teresa Beach Sunset"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>
