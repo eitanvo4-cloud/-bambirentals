@@ -8,13 +8,17 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
     return (
         <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
+            {/* Background Video with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1920"
-                    alt="Santa Teresa Beach ATV"
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
-                />
+                >
+                    <source src="/videos/hero.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-black/50 to-black/20"></div>
             </div>
 
