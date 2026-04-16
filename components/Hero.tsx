@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ArrowDown } from 'lucide-react';
 
 interface HeroProps {
@@ -6,11 +6,20 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.play().catch(() => {});
+        }
+    }, []);
+
     return (
         <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
             {/* Background Video with Overlay */}
             <div className="absolute inset-0 z-0">
                 <video
+                    ref={videoRef}
                     autoPlay
                     loop
                     muted
