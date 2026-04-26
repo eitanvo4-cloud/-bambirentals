@@ -1,7 +1,28 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createTransport } from 'nodemailer';
-import { ATV_FLEET } from '../constants';
-import type { BookingRequest } from '../types';
+
+const ATV_NAMES: Record<string, string> = {
+    'honda-425': 'Honda TRX 425',
+    'honda-520': 'Honda Rubicon 520',
+    'kymco-400': 'Kymco MXU 400',
+    'kymco-mxu-400': 'Kymco MXU 400',
+    'cfmoto-600': 'CF Moto CForce 600',
+};
+
+interface BookingRequest {
+    email: string;
+    firstName: string;
+    lastName: string;
+    atvId: string;
+    startDate: string;
+    endDate: string;
+    whatsappNumber: string;
+    theftProtection: boolean;
+    fullDamageProtection: boolean;
+    prepaidRefueling: number;
+    totalPrice: number;
+    agreedToTerms: boolean;
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -9,8 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const booking: BookingRequest = req.body;
     if (!booking?.email) return res.status(400).json({ error: 'Missing booking data' });
 
-    const atv = ATV_FLEET.find(a => a.id === booking.atvId);
-    const modelName = atv ? atv.modelName : 'ATV';
+    const modelName = ATV_NAMES[booking.atvId] ?? 'ATV';
 
     const transporter = createTransport({
         host: 'smtp.gmail.com',
