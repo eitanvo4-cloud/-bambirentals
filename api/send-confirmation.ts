@@ -1,15 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import nodemailer from 'nodemailer';
+import { createTransport } from 'nodemailer';
 import { ATV_FLEET } from '../constants';
 import type { BookingRequest } from '../types';
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-    },
-});
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -19,6 +11,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const atv = ATV_FLEET.find(a => a.id === booking.atvId);
     const modelName = atv ? atv.modelName : 'ATV';
+
+    const transporter = createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_APP_PASSWORD,
+        },
+    });
 
     try {
         await transporter.sendMail({
