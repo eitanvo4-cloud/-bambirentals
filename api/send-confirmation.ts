@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { createTransport } from 'nodemailer';
+// DEBUG: nodemailer import temporarily removed to isolate crash
+// import { createTransport } from 'nodemailer';
 
 const ATV_NAMES: Record<string, string> = {
     'honda-425': 'Honda TRX 425',
@@ -32,30 +33,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const modelName = ATV_NAMES[booking.atvId] ?? 'ATV';
 
-    const transporter = createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
-        auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_APP_PASSWORD,
-        },
-    });
-
-    try {
-        await transporter.sendMail({
-            from: `"Bambi Rentals" <${process.env.GMAIL_USER}>`,
-            to: booking.email,
-            replyTo: process.env.GMAIL_USER,
-            subject: `Booking Request Received — ${modelName}`,
-            html: buildEmailHtml(booking, modelName),
-        });
-        return res.status(200).json({ success: true });
-    } catch (error) {
-        console.error('Gmail SMTP error:', error);
-        // Return 200 so the frontend booking flow is never broken by an email failure
-        return res.status(200).json({ success: false, error: 'Email send failed' });
-    }
+    // DEBUG: stub returning ok to isolate crash source
+    return res.status(200).json({ success: true, debug: 'nodemailer removed', modelName });
 }
 
 function formatDate(dateStr: string): string {
