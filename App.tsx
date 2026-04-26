@@ -177,7 +177,7 @@ const App: React.FC = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <button onClick={() => setCurrentView('home')} className="text-gray-600 hover:text-primary font-medium transition-colors">Fleet</button>
+              <button onClick={() => setCurrentView('home')} className="text-gray-900 hover:text-primary font-medium transition-colors">Fleet</button>
               <button
                 onClick={() => {
                   const element = document.getElementById('about-us');
@@ -190,13 +190,13 @@ const App: React.FC = () => {
                     }, 100);
                   }
                 }}
-                className="text-gray-600 hover:text-primary font-medium transition-colors"
+                className="text-gray-900 hover:text-primary font-medium transition-colors"
               >About Us</button>
               <a
                 href="https://wa.me/50664132024"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary font-medium transition-colors flex items-center gap-1"
+                className="text-gray-900 hover:text-primary font-medium transition-colors flex items-center gap-1"
                 title="WhatsApp"
                 aria-label="Contact us on WhatsApp"
               >
@@ -204,7 +204,7 @@ const App: React.FC = () => {
               </a>
               <a
                 href="mailto:ofeynat2021@gmail.com"
-                className="text-gray-600 hover:text-primary font-medium transition-colors flex items-center gap-1"
+                className="text-gray-900 hover:text-primary font-medium transition-colors flex items-center gap-1"
                 title="Email"
                 aria-label="Send us an email"
               >
@@ -212,7 +212,7 @@ const App: React.FC = () => {
               </a>
               <button
                 onClick={() => setIsFAQOpen(!isFAQOpen)}
-                className="text-gray-600 hover:text-primary font-medium transition-colors"
+                className="text-gray-900 hover:text-primary font-medium transition-colors"
               >Help & FAQ</button>
               <button
                 onClick={() => {
@@ -233,7 +233,7 @@ const App: React.FC = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-gray-700 p-2 hover:text-primary transition-colors"
+                className="text-gray-900 p-2 hover:text-primary transition-colors"
               >
                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
