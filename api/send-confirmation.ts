@@ -1,35 +1,36 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 import { ATV_FLEET } from '../constants';
 import type { BookingRequest } from '../types';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+    },
+});
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
-    }
+    if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
     const booking: BookingRequest = req.body;
-
-    if (!booking?.email) {
-        return res.status(400).json({ error: 'Missing booking data' });
-    }
+    if (!booking?.email) return res.status(400).json({ error: 'Missing booking data' });
 
     const atv = ATV_FLEET.find(a => a.id === booking.atvId);
     const modelName = atv ? atv.modelName : 'ATV';
 
     try {
-        await resend.emails.send({
-            from: 'Bambi Rentals <onboarding@resend.dev>',
-            to: [booking.email],
-            replyTo: 'ofeynat2021@gmail.com',
+        await transporter.sendMail({
+            from: `"Bambi Rentals" <${process.env.GMAIL_USER}>`,
+            to: booking.email,
+            replyTo: process.env.GMAIL_USER,
             subject: `Booking Request Received — ${modelName}`,
             html: buildEmailHtml(booking, modelName),
         });
         return res.status(200).json({ success: true });
     } catch (error) {
-        console.error('Resend error:', error);
+        console.error('Gmail SMTP error:', error);
         // Return 200 so the frontend booking flow is never broken by an email failure
         return res.status(200).json({ success: false, error: 'Email send failed' });
     }
