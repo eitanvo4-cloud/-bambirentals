@@ -62,7 +62,18 @@ export const createBooking = async (booking: BookingRequest): Promise<{ success:
 
         // FormSubmit returns the response data
         await response.json();
-        
+
+        // Send confirmation email to customer (non-blocking — failure must not surface to user)
+        try {
+            await fetch('/api/send-confirmation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(booking),
+            });
+        } catch (emailError) {
+            console.warn('Confirmation email failed (non-critical):', emailError);
+        }
+
         return { success: true, message: "Booking request sent successfully!" };
 
     } catch (error) {
