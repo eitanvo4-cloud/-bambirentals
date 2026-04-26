@@ -33,12 +33,12 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-                <span className="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/50 text-primary font-bold tracking-widest uppercase mb-6 backdrop-blur-md font-display" style={{ fontSize: '1.05rem' }}>
+                <span className="inline-block py-1 px-3 rounded-full bg-white/[0.12] backdrop-blur-xl border border-white/50 text-white font-bold tracking-widest uppercase mb-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_4px_12px_rgba(0,0,0,0.15)] font-display" style={{ fontSize: '1.05rem' }}>
                     Santa Teresa
                 </span>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl tracking-tight font-display">
                     Explore Paradise <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400 drop-shadow-[0_0_15px_rgba(212,98,30,0.5)]">on ATV</span>
+                    <span className="text-white">on ATV</span>
                 </h1>
                 <p className="text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
                     Rent premium Honda ATVs and discover the hidden waterfalls and secret beaches of the Nicoya Peninsula.
