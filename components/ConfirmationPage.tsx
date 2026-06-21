@@ -39,7 +39,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                 <div className="p-8 md:p-12">
                     <div className="text-center mb-10">
                         <p className="text-gray-600 font-light text-lg leading-relaxed max-w-xl mx-auto">
-                            Thank you for choosing BambiRentals. We have received your request for the <span className="font-bold text-primary font-display">{atv.modelName}</span>.
+                            Thank you for choosing Costa Rica Rentals. We have received your request for the <span className="font-bold text-primary font-display">{atv.modelName}</span>.
                             Our team will review availability and send a confirmation email to <span className="font-semibold text-gray-900">{booking.email}</span> shortly.
                             <br /><br />
                             <span className="font-medium text-secondary">Want a faster response? Message us directly on WhatsApp and we'll confirm your booking in minutes.</span>
