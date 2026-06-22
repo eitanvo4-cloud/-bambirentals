@@ -1,4 +1,4 @@
-# Bambi Rentals
+# Costa Rica Rentals
 
 ATV rental website for Santa Teresa, Costa Rica.
 

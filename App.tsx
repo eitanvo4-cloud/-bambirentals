@@ -17,6 +17,7 @@ import { BookingForm } from './components/BookingForm';
 import { ConfirmationPage } from './components/ConfirmationPage';
 import { FAQAssistant } from './components/GeminiAssistant';
 import { Hero } from './components/Hero';
+import { Logo } from './components/Logo';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('home');
@@ -69,7 +70,7 @@ const App: React.FC = () => {
     if (isLoading) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-eggshell">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary shadow-[0_0_15px_rgba(212,98,30,0.5)]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       );
     }
@@ -141,7 +142,7 @@ const App: React.FC = () => {
                   <span className="text-primary font-bold uppercase tracking-widest text-sm font-display">About Us</span>
                   <h3 className="text-3xl font-bold mb-6 mt-2 tracking-wide font-display text-gray-900">Who We Are</h3>
                   <p className="text-lg text-gray-600 leading-relaxed font-light">
-                    Founded in Santa Teresa in 2020, Bambirental is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
+                    Founded in Santa Teresa in 2020, Costa Rica Rentals is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
                   </p>
                 </div>
                 <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
@@ -166,13 +167,10 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div
-              className="flex items-center gap-2 cursor-pointer"
+              className="cursor-pointer"
               onClick={() => setCurrentView('home')}
             >
-              <div className="w-10 h-10 bg-primary/20 backdrop-blur-md rounded-lg flex items-center justify-center transform -rotate-6 border border-primary/50 shadow-[0_0_15px_rgba(212,98,30,0.3)]">
-                <span className="text-primary font-bold text-xl font-display">B</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-900 tracking-tight font-display">BambiRentals</span>
+              <Logo variant="dark" size="md" />
             </div>
 
             {/* Desktop Menu */}
@@ -223,7 +221,7 @@ const App: React.FC = () => {
                     setCurrentView('home');
                   }
                 }}
-                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_0_15px_rgba(212,98,30,0.4)] hover:shadow-[0_0_25px_rgba(212,98,30,0.6)] transform hover:-translate-y-0.5"
+                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_4px_14px_-4px_rgba(184,82,26,0.5)] hover:shadow-[0_8px_22px_-6px_rgba(184,82,26,0.6)] transform hover:-translate-y-0.5"
               >
                 Book Now
               </button>
@@ -321,11 +319,8 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Brand & Social */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary/20 backdrop-blur-md rounded flex items-center justify-center border border-primary/50 shadow-[0_0_10px_rgba(212,98,30,0.3)]">
-                <span className="text-primary font-bold font-display">B</span>
-              </div>
-              <span className="text-xl font-bold text-white font-display">BambiRentals</span>
+            <div className="mb-6">
+              <Logo variant="light" size="sm" />
             </div>
             <p className="text-slate-400 mb-6 font-light">
               Your gateway to the hidden gems of the Nicoya Peninsula. Reliable rides, local vibes.
@@ -370,7 +365,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 text-center text-slate-500 text-sm font-light">
-          © {new Date().getFullYear()} BambiRentals. All rights reserved.
+          © {new Date().getFullYear()} Costa Rica Rentals. All rights reserved.
         </div>
       </footer>
     </div>

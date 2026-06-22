@@ -392,14 +392,14 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                             className="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                         />
                         <label htmlFor="terms" className="text-sm text-gray-600 font-light">
-                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-primary underline font-medium hover:text-primary-hover">Terms & Conditions</button> of BambiRentals.
+                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-primary underline font-medium hover:text-primary-hover">Terms & Conditions</button> of Costa Rica Rentals.
                         </label>
                     </div>
 
                     <button
                         type="submit"
                         disabled={totalPrice <= 0}
-                        className="w-full bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1"
+                        className="w-full bg-primary hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white text-lg font-bold py-4 rounded-xl shadow-[0_8px_24px_-8px_rgba(184,82,26,0.5)] hover:shadow-[0_12px_30px_-8px_rgba(184,82,26,0.6)] transition-all transform hover:-translate-y-1"
                     >
                         Confirm Request
                     </button>
@@ -420,7 +420,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                         <div className="p-6 border-t border-gray-200">
                             <button
                                 onClick={() => { setAgreed(true); setShowTerms(false); }}
-                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl shadow-[0_0_15px_rgba(212,98,30,0.4)]"
+                                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-3 rounded-xl shadow-[0_4px_14px_-4px_rgba(184,82,26,0.5)]"
                             >
                                 I Agree
                             </button>

@@ -39,7 +39,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                 <div className="p-8 md:p-12">
                     <div className="text-center mb-10">
                         <p className="text-gray-600 font-light text-lg leading-relaxed max-w-xl mx-auto">
-                            Thank you for choosing BambiRentals. We have received your request for the <span className="font-bold text-primary font-display">{atv.modelName}</span>.
+                            Thank you for choosing Costa Rica Rentals. We have received your request for the <span className="font-bold text-primary font-display">{atv.modelName}</span>.
                             Our team will review availability and send a confirmation email to <span className="font-semibold text-gray-900">{booking.email}</span> shortly.
                             <br /><br />
                             <span className="font-medium text-secondary">Want a faster response? Message us directly on WhatsApp and we'll confirm your booking in minutes.</span>
@@ -107,7 +107,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                             href={waLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_8px_24px_-8px_rgba(184,82,26,0.5)] hover:shadow-[0_12px_30px_-8px_rgba(184,82,26,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
                         >
                             <MessageCircle size={24} />
                             Confirm via WhatsApp
