@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button
                         onClick={onCtaClick}
-                        className="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-xl transition-all shadow-[0_0_20px_rgba(212,98,30,0.5)] hover:shadow-[0_0_35px_rgba(212,98,30,0.8)] transform hover:-translate-y-1 hover:scale-105"
+                        className="bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-10 rounded-xl transition-all shadow-[0_8px_24px_-8px_rgba(184,82,26,0.5)] hover:shadow-[0_12px_30px_-8px_rgba(184,82,26,0.65)] transform hover:-translate-y-1 hover:scale-105"
                     >
                         Rent Your ATV
                     </button>

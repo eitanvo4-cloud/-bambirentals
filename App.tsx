@@ -70,7 +70,7 @@ const App: React.FC = () => {
     if (isLoading) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-eggshell">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary shadow-[0_0_15px_rgba(212,98,30,0.5)]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       );
     }
@@ -221,7 +221,7 @@ const App: React.FC = () => {
                     setCurrentView('home');
                   }
                 }}
-                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_0_15px_rgba(212,98,30,0.4)] hover:shadow-[0_0_25px_rgba(212,98,30,0.6)] transform hover:-translate-y-0.5"
+                className="bg-primary text-white px-6 py-2.5 rounded-xl font-bold hover:bg-primary-hover transition-all shadow-[0_4px_14px_-4px_rgba(184,82,26,0.5)] hover:shadow-[0_8px_22px_-6px_rgba(184,82,26,0.6)] transform hover:-translate-y-0.5"
               >
                 Book Now
               </button>

@@ -106,7 +106,7 @@ export const FAQAssistant: React.FC<FAQAssistantProps> = ({ isOpen: controlledIs
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="bg-primary hover:bg-primary-hover text-white p-4 rounded-full shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] border border-primary/50 transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
+                    className="bg-primary hover:bg-primary-hover text-white p-4 rounded-full shadow-[0_8px_24px_-8px_rgba(184,82,26,0.5)] hover:shadow-[0_12px_30px_-8px_rgba(184,82,26,0.6)] border border-primary/50 transition-all transform hover:-translate-y-1 flex items-center gap-2 group"
                 >
                     <MessageCircle size={28} />
                     <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap font-bold font-display">

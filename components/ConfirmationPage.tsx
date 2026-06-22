@@ -107,7 +107,7 @@ export const ConfirmationPage: React.FC<ConfirmationPageProps> = ({ booking, atv
                             href={waLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(212,98,30,0.4)] hover:shadow-[0_0_30px_rgba(212,98,30,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            className="w-full max-w-sm bg-primary hover:bg-primary-hover text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_8px_24px_-8px_rgba(184,82,26,0.5)] hover:shadow-[0_12px_30px_-8px_rgba(184,82,26,0.6)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
                         >
                             <MessageCircle size={24} />
                             Confirm via WhatsApp
