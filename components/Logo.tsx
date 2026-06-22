@@ -16,13 +16,13 @@ export const SunMark: React.FC<SunMarkProps> = ({ size = 40, className = '' }) =
     className={className}
     aria-hidden="true"
   >
-    <path d="M11 25 A9 9 0 0 1 29 25 Z" fill="#D4621E" />
-    <g stroke="#C4973C" strokeWidth="2" strokeLinecap="round">
-      <line x1="12" y1="18" x2="9" y2="15" />
-      <line x1="20" y1="13" x2="20" y2="9" />
-      <line x1="28" y1="18" x2="31" y2="15" />
+    <path d="M8 24 A12 12 0 0 1 32 24 Z" fill="#D4621E" />
+    <g stroke="#C4973C" strokeWidth="2.5" strokeLinecap="round">
+      <line x1="11.5" y1="15" x2="7.5" y2="11" />
+      <line x1="20" y1="9" x2="20" y2="3.5" />
+      <line x1="28.5" y1="15" x2="32.5" y2="11" />
     </g>
-    <line x1="6" y1="25" x2="34" y2="25" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+    <line x1="3" y1="24" x2="37" y2="24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
   </svg>
 );
 
@@ -34,7 +34,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md' }) => {
   const textColor = variant === 'dark' ? 'text-gray-900' : 'text-white';
   const descColor = variant === 'dark' ? 'text-[#9C6B2E]' : 'text-secondary';
-  const markSize = size === 'md' ? 40 : 32;
+  const markSize = size === 'md' ? 46 : 36;
   const titleSize = size === 'md' ? 'text-2xl' : 'text-xl';
   return (
     <div className={`flex items-center gap-2.5 ${textColor}`}>

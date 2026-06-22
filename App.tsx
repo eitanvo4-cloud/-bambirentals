@@ -6,8 +6,7 @@ import {
   Calendar,
   Phone,
   MessageCircle,
-  Mail,
-  ChevronRight
+  Mail
 } from 'lucide-react';
 import { ATV, BookingRequest, ViewState } from './types';
 import { fetchFleet, createBooking } from './services/api';

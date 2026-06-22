@@ -25,7 +25,7 @@ const FAQS: FAQItem[] = [
     },
     {
         question: "What's the difference between the Honda 425 and 520?",
-        answer: "Both models feature automatic transmissions and 4x4 capabilities. The 425 is lighter and more agile — great for solo riders on steep hills. The 520 features power steering and extra comfort — perfect for longer trips or rougher roads."
+        answer: "Both models feature automatic transmissions and 4x4 capabilities. The 425 is lighter and more agile, great for solo riders on steep hills. The 520 features power steering and extra comfort, perfect for longer trips or rougher roads."
     },
     {
         question: "How do I book?",
