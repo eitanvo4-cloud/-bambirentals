@@ -17,6 +17,7 @@ import { BookingForm } from './components/BookingForm';
 import { ConfirmationPage } from './components/ConfirmationPage';
 import { FAQAssistant } from './components/GeminiAssistant';
 import { Hero } from './components/Hero';
+import { Logo } from './components/Logo';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('home');
@@ -166,13 +167,10 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div
-              className="flex items-center gap-2 cursor-pointer"
+              className="cursor-pointer"
               onClick={() => setCurrentView('home')}
             >
-              <div className="w-10 h-10 bg-primary/20 backdrop-blur-md rounded-lg flex items-center justify-center transform -rotate-6 border border-primary/50 shadow-[0_0_15px_rgba(212,98,30,0.3)]">
-                <span className="text-primary font-bold text-xl font-display">B</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-900 tracking-tight font-display">BambiRentals</span>
+              <Logo variant="dark" size="md" />
             </div>
 
             {/* Desktop Menu */}
@@ -321,11 +319,8 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Column 1: Brand & Social */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary/20 backdrop-blur-md rounded flex items-center justify-center border border-primary/50 shadow-[0_0_10px_rgba(212,98,30,0.3)]">
-                <span className="text-primary font-bold font-display">B</span>
-              </div>
-              <span className="text-xl font-bold text-white font-display">BambiRentals</span>
+            <div className="mb-6">
+              <Logo variant="light" size="sm" />
             </div>
             <p className="text-slate-400 mb-6 font-light">
               Your gateway to the hidden gems of the Nicoya Peninsula. Reliable rides, local vibes.
