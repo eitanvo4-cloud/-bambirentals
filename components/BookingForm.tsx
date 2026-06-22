@@ -392,7 +392,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ atv, onCancel, onSubmi
                             className="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                         />
                         <label htmlFor="terms" className="text-sm text-gray-600 font-light">
-                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-primary underline font-medium hover:text-primary-hover">Terms & Conditions</button> of BambiRentals.
+                            I agree to the <button type="button" onClick={() => setShowTerms(true)} className="text-primary underline font-medium hover:text-primary-hover">Terms & Conditions</button> of Costa Rica Rentals.
                         </label>
                     </div>
 

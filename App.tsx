@@ -141,7 +141,7 @@ const App: React.FC = () => {
                   <span className="text-primary font-bold uppercase tracking-widest text-sm font-display">About Us</span>
                   <h3 className="text-3xl font-bold mb-6 mt-2 tracking-wide font-display text-gray-900">Who We Are</h3>
                   <p className="text-lg text-gray-600 leading-relaxed font-light">
-                    Founded in Santa Teresa in 2020, Bambirental is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
+                    Founded in Santa Teresa in 2020, Costa Rica Rentals is a family-owned company dedicated to making your vacation smooth and stress-free. We provide reliable transportation so you can explore the jungle, beaches, and hidden gems of the area with total freedom. More than a rental service, we're your local partner for unforgettable adventures.
                   </p>
                 </div>
                 <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
@@ -370,7 +370,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/10 text-center text-slate-500 text-sm font-light">
-          © {new Date().getFullYear()} BambiRentals. All rights reserved.
+          © {new Date().getFullYear()} Costa Rica Rentals. All rights reserved.
         </div>
       </footer>
     </div>
