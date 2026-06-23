@@ -43,9 +43,9 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md' }) => 
     <div className={`flex items-center gap-2.5 ${textColor}`}>
       <SunMark size={markSize} />
       <div className="flex flex-col leading-none">
-        <span className={`font-display font-extrabold ${titleSize} tracking-tight`}>Costa Rica</span>
+        <span className={`font-display font-extrabold ${titleSize} tracking-tight`}>Costa Rica Rentals</span>
         <span className={`font-sans font-semibold uppercase tracking-[0.18em] text-[10px] mt-1 ${descColor}`}>
-          Rentals · Santa Teresa
+          Monteverde · Santa Teresa
         </span>
       </div>
     </div>
