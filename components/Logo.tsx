@@ -17,10 +17,13 @@ export const SunMark: React.FC<SunMarkProps> = ({ size = 40, className = '' }) =
     aria-hidden="true"
   >
     <path d="M8 24 A12 12 0 0 1 32 24 Z" fill="#D4621E" />
+    {/* Rays sit at a uniform distance from the dome: each inner endpoint is ~15
+        from the sun's center (20,24) — i.e. a constant 3-unit gap beyond the
+        radius-12 dome — so top and side rays clear the ball evenly. */}
     <g stroke="#C4973C" strokeWidth="2.5" strokeLinecap="round">
-      <line x1="11.5" y1="15" x2="7.5" y2="11" />
-      <line x1="20" y1="9" x2="20" y2="3.5" />
-      <line x1="28.5" y1="15" x2="32.5" y2="11" />
+      <line x1="9.4" y1="13.4" x2="5.1" y2="9.1" />
+      <line x1="20" y1="9" x2="20" y2="3" />
+      <line x1="30.6" y1="13.4" x2="34.9" y2="9.1" />
     </g>
     <line x1="3" y1="24" x2="37" y2="24" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
   </svg>
