@@ -11,6 +11,7 @@ ATV rental site for Santa Teresa, Costa Rica — client project, live in product
 ## Deploy — read before touching anything
 - **Push to `main` = production deploy.** GitHub-connected Vercel auto-deploys to https://bambirentals.vercel.app. There is NO manual `vercel --prod` step; do not run it.
 - Verify a deploy via `gh` commit status (or the Vercel dashboard), not by re-deploying.
+- **Deploys only fire for git authors with access to the client's Vercel team** (`ofeynat2021-8517's projects`). If commit status shows "Git author ... must have access to the project on Vercel", the push did NOT deploy and production keeps serving the previous build. Fix: accept the Vercel team invite from the status `target_url`, then redeploy (empty commit or dashboard Redeploy).
 - **Cloud agents also push to this repo** (merged PRs #1-#3 came from them). ALWAYS `git fetch origin` and check `git status -sb` before committing or merging — origin/main moves without warning.
 
 ## Workflow conventions
