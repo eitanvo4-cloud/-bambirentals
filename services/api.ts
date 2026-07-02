@@ -29,10 +29,12 @@ export const createBooking = async (booking: BookingRequest): Promise<{ success:
     const modelName = atv ? atv.modelName : "Unknown Model";
 
     // 3. Prepare FormSubmit Payload
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(booking.email);
+
     const payload = {
         _subject: `New Booking Request: ${modelName}`,
         _template: "table",
-        _cc: booking.email,
+        ...(isValidEmail && { _cc: booking.email }),
         "ATV Model": modelName,
         "First Name": booking.firstName,
         "Last Name": booking.lastName,
@@ -43,7 +45,7 @@ export const createBooking = async (booking: BookingRequest): Promise<{ success:
         "Theft Protection": booking.theftProtection ? "Yes" : "No",
         "Full Damage Protection": booking.fullDamageProtection ? "Yes" : "No",
         "Pre-paid Refueling (tanks)": booking.prepaidRefueling,
-        "Total Price": `$${booking.totalPrice}`,
+        "Total Price": `$${booking.totalPrice.toFixed(2)}`,
         "Agreed To Terms": booking.agreedToTerms ? "Yes" : "No"
     };
 
