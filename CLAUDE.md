@@ -9,9 +9,12 @@ ATV rental site for Santa Teresa, Costa Rica — client project, live in product
 - Supabase arrives in the marketplace phase (ROADMAP milestone 2); today there is no database and no server.
 
 ## Deploy — read before touching anything
-- **Push to `main` = production deploy.** GitHub-connected Vercel auto-deploys to https://bambirentals.vercel.app. There is NO manual `vercel --prod` step; do not run it.
+- **Push to `main` = production deploy.** GitHub-connected Vercel auto-deploys to https://bambirentals.vercel.app (also `costaricarentals.cr` / `www.costaricarentals.cr`). There is NO manual `vercel --prod` step; do not run it.
 - Verify a deploy via `gh` commit status (or the Vercel dashboard), not by re-deploying.
-- **Every push to main auto-triggers a Vercel deploy — but Vercel only ACCEPTS it if the git author is a member of the client's Vercel team** (`ofeynat2021-8517's projects`). If `gh` commit status shows "Git author ... must have access to the project on Vercel", the deploy was bounced and production keeps serving the previous build (happened 2026-07-02, three pushes in a row). Fix once: accept the Vercel team invite from the status `target_url`. After that, pushes deploy by themselves again; to ship commits that were bounced meanwhile, any new push (or dashboard Redeploy) builds branch HEAD and picks them all up.
+- **Keep the GitHub repo PUBLIC.** The Vercel team (`ofeynat2021-8517's projects`) is on the **Hobby** plan. On Hobby, a *private* repo only deploys commits whose author resolves to the team owner's Vercel account — everyone else's push is `BLOCKED` ("Git author … must have access to the project on Vercel"), and production silently keeps serving the last good build. A *public* repo has no such restriction. The repo was flipped private ~2026-07-02 and every deploy was blocked for ~2 months until it was made public again on 2026-09-09 (`137f7b8`). If deploys start bouncing, check repo visibility FIRST (`gh repo view --json visibility`).
+  - Stopgap while blocked: Vercel dashboard → bambirentals → Deployments → latest → ⋯ → Redeploy (runs as the owner, bypasses the block, ships `main` HEAD).
+  - To retrigger a deploy with no code change: `git commit --allow-empty` + push to main.
+- `.vercel/project.json` is gitignored and currently points at a **stale** project/team — ignore it, or `vercel link` to the `ofeynat2021-8517's projects` team if you need the CLI. Does not affect git-push deploys.
 - **Cloud agents also push to this repo** (merged PRs #1-#3 came from them). ALWAYS `git fetch origin` and check `git status -sb` before committing or merging — origin/main moves without warning.
 
 ## Workflow conventions
